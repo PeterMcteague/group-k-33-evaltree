@@ -7,6 +7,6 @@
    ([exp one two]
      ;;Easy case, one and two are both numbers
     (if (and (number? one) (number? two))
-        (cons (apply (read-string exp) (cons one (cons two ()))) (cons one (cons two '())))
+        (cons (apply (resolve (symbol exp)) (cons one (cons two ()))) (cons one (cons two '())))
       ))
    )
