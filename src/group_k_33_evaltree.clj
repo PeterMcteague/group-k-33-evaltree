@@ -76,3 +76,5 @@
  (evaltree-recursive-v2 '(* () 2))
  (evaltree-recursive-v2 '(* 2))
  (evaltree-recursive-v2 '(* (+ 5 (* 3 7)) (- 6 8)))
+
+ ;;Breaks if it's trying to solve a list containing an empty bracket.
