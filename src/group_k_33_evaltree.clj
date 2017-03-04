@@ -57,11 +57,11 @@
   )
 
 ;;A slightly better solution using nth instead of first and rest and using conj instead of multiple cons's.
-;;Also handles errors more cleanly.
+;;Also solves list pairs where one cannot be solved.
 (defn evaltree-recursive-v2
   ;;If we get a valid list, make a recursive call with the parts of the list as the arguments.
   ([list]
-   (if (and (= 3 (count list)) (not (in? list '())))
+   (if (= 3 (count list))
      (evaltree-recursive-v2 (nth list 0) (nth list 1) (nth list 2))
      list
      ))
@@ -76,10 +76,25 @@
         (conj '() two one))
 
      ;;If the inputs are lists, then apply the expression to the solutions of both lists, and create a new list with the result replacing the expression.
-     (and (and (list? one) (list? two)) (and (not= one (evaltree-recursive-v2 one)) (not= two (evaltree-recursive-v2 two))))
-      (cons
-        (apply (resolve(symbol exp)) (conj '() (first (evaltree-recursive-v2 two)) (first (evaltree-recursive-v2 one))))
-        (conj '() (evaltree-recursive-v2 two) (evaltree-recursive-v2 one)))
+     (and (list? one) (list? two))
+       (cond
+         ;;If both are solvable
+         (and (not= one (evaltree-recursive-v2 one)) (not= two (evaltree-recursive-v2 two)))
+           (cons
+             (apply (resolve(symbol exp)) (conj '() (first (evaltree-recursive-v2 two)) (first (evaltree-recursive-v2 one))))
+             (conj '() (evaltree-recursive-v2 two) (evaltree-recursive-v2 one)))
+
+         ;;If one is solvable
+         (not= one (evaltree-recursive-v2 one))
+          (conj '() two (evaltree-recursive-v2 one) exp)
+
+         ;;If two is solvable
+         (not= two (evaltree-recursive-v2 two))
+          (conj '() (evaltree-recursive-v2 two) one exp)
+
+         :else
+          (conj '() two one exp)
+         )
 
      ;;If just one is a list , solve one and apply the expression to the result of one and the value of two, before creating a new list.
      (and (number? two) (and (list? one) (not= one (evaltree-recursive-v2 one))))
@@ -99,6 +114,7 @@
      )))
 
 
+;;Issue is that second bracket doesn't get solved on last one. It probably could be solved.
  (defn evaltree-recursive-test []
    (assertequals '(6 3 2) (evaltree-recursive '(* 3 2)))
    (assertequals '(3 (3 1 2) (1 -5 6)) (evaltree-recursive '(* (+ 1 2) (+ -5 6))))
@@ -117,6 +133,6 @@
   (assertequals '(* () 2) (evaltree-recursive-v2 '(* () 2)))
   (assertequals '(* 2) (evaltree-recursive-v2 '(* 2)))
   (assertequals '(-52 (26 5 (21 3 7)) (-2 6 8)) (evaltree-recursive-v2 '(* (+ 5 (* 3 7)) (- 6 8))))
-  (assertequals '(* (+ 5 ()) (- 6 8)) (evaltree-recursive-v2 '(* (+ 5 ()) (- 6 8)))))
+  (assertequals '(* (+ 5 ()) (-2 6 8)) (evaltree-recursive-v2 '(* (+ 5 ()) (- 6 8)))))
 
 

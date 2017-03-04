@@ -19,10 +19,10 @@
       <file leaf-file-name="group_k_33_evaltree.clj" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/group_k_33_evaltree.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2057">
-              <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+            <state relative-caret-position="2312">
+              <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
               <folding>
-                <marker date="1488659401146" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
+                <marker date="1488660987170" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
               </folding>
             </state>
           </provider>
@@ -394,7 +394,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3364486" sideWeight="0.50278217" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="REPL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3364486" sideWeight="0.50278217" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3364486" sideWeight="0.4972178" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3364486" sideWeight="0.4972178" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -421,7 +421,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -435,7 +435,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488659401146" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
+            <marker date="1488660987170" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
           </folding>
         </state>
       </provider>
@@ -445,7 +445,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488659401146" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
+            <marker date="1488660987170" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
           </folding>
         </state>
       </provider>
@@ -455,7 +455,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488659401146" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
+            <marker date="1488660987170" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
           </folding>
         </state>
       </provider>
@@ -465,7 +465,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488659401146" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
+            <marker date="1488660987170" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
           </folding>
         </state>
       </provider>
@@ -475,7 +475,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488659401146" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
+            <marker date="1488660987170" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
           </folding>
         </state>
       </provider>
@@ -485,7 +485,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488659401146" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
+            <marker date="1488660987170" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
           </folding>
         </state>
       </provider>
@@ -495,7 +495,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488659401146" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
+            <marker date="1488660987170" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
           </folding>
         </state>
       </provider>
@@ -511,10 +511,10 @@
     <entry file="file://$PROJECT_DIR$/test/group_k_33_evaltree/core_test.clj" />
     <entry file="file://$PROJECT_DIR$/src/group_k_33_evaltree.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+        <state relative-caret-position="2312">
+          <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
           <folding>
-            <marker date="1488659401146" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
+            <marker date="1488660987170" expanded="true" signature="490:504" ph="(defn evaltree ...)" />
           </folding>
         </state>
       </provider>
