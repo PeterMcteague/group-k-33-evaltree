@@ -100,7 +100,7 @@
 (evaltree-recursive '(* () 2))
 (evaltree-recursive '(* 2))
 (evaltree-recursive '(* (+ 5 (* 3 7)) (- 6 8)))
-(evaltree-recursive-v2 '(* (+ 5 ()) (- 6 8)))
+(evaltree-recursive '(* (+ 5 ()) (- 6 8)))
 ;;Tests for v2 recursive solution
 (evaltree-recursive-v2 '(* 3 2))
 (evaltree-recursive-v2 '(* (+ 1 2) (+ -5 6)))
