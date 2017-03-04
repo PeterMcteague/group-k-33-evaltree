@@ -1,5 +1,12 @@
  (ns group-k-33-evaltree)
 
+;;A function to perform similarly to say whether two things are the same
+ (defn assertequals [expected answer]
+   (println "Expected: " expected)
+   (println "Answer: " answer)
+   (= expected answer)
+   )
+
 ;;A function for finding if a list contains an item (contains? was deprecated in an earlier version).
 ;;Taken from http://stackoverflow.com/a/3249777
 (defn in?
@@ -92,22 +99,24 @@
      )))
 
 
-;;Tests for first recursive solution
-(evaltree-recursive '(* 3 2))
-(evaltree-recursive '(* (+ 1 2) (+ -5 6)))
-(evaltree-recursive '(* 2 (+ -5 6)))
-(evaltree-recursive '(* (+ -5 6) 2))
-(evaltree-recursive '(* () 2))
-(evaltree-recursive '(* 2))
-(evaltree-recursive '(* (+ 5 (* 3 7)) (- 6 8)))
-(evaltree-recursive '(* (+ 5 ()) (- 6 8)))
-;;Tests for v2 recursive solution
-(evaltree-recursive-v2 '(* 3 2))
-(evaltree-recursive-v2 '(* (+ 1 2) (+ -5 6)))
-(evaltree-recursive-v2 '(* 2 (+ -5 6)))
-(evaltree-recursive-v2 '(* (+ -5 6) 2))
-(evaltree-recursive-v2 '(* () 2))
-(evaltree-recursive-v2 '(* 2))
-(evaltree-recursive-v2 '(* (+ 5 (* 3 7)) (- 6 8)))
-(evaltree-recursive-v2 '(* (+ 5 ()) (- 6 8)))
+ (defn evaltree-recursive-test []
+   (assertequals '(6 3 2) (evaltree-recursive '(* 3 2)))
+   (assertequals '(3 (3 1 2) (1 -5 6)) (evaltree-recursive '(* (+ 1 2) (+ -5 6))))
+   (assertequals '(2 2 (1 -5 6)) (evaltree-recursive '(* 2 (+ -5 6))))
+   (assertequals '(2 (1 -5 6) 2) (evaltree-recursive '(* (+ -5 6) 2)))
+   (assertequals '(* () 2) (evaltree-recursive '(* () 2)))
+   (assertequals '(* 2) (evaltree-recursive '(* 2)))
+   (assertequals '(-52 (26 5 (21 3 7)) (-2 6 8)) (evaltree-recursive '(* (+ 5 (* 3 7)) (- 6 8))))
+   (assertequals '(* (+ 5 ()) (- 6 8)) (evaltree-recursive '(* (+ 5 ()) (- 6 8)))))
+
+(defn evaltree-recursive-v2-test []
+  (assertequals '(6 3 2) (evaltree-recursive-v2 '(* 3 2)))
+  (assertequals '(3 (3 1 2) (1 -5 6)) (evaltree-recursive-v2 '(* (+ 1 2) (+ -5 6))))
+  (assertequals '(2 2 (1 -5 6)) (evaltree-recursive-v2 '(* 2 (+ -5 6))))
+  (assertequals '(2 (1 -5 6) 2) (evaltree-recursive-v2 '(* (+ -5 6) 2)))
+  (assertequals '(* () 2) (evaltree-recursive-v2 '(* () 2)))
+  (assertequals '(* 2) (evaltree-recursive-v2 '(* 2)))
+  (assertequals '(-52 (26 5 (21 3 7)) (-2 6 8)) (evaltree-recursive-v2 '(* (+ 5 (* 3 7)) (- 6 8))))
+  (assertequals '(* (+ 5 ()) (- 6 8)) (evaltree-recursive-v2 '(* (+ 5 ()) (- 6 8)))))
+
 
