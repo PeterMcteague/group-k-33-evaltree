@@ -31,13 +31,13 @@
             (cons (evaltree-recursive one) (cons (evaltree-recursive two) '())))
 
      ;;If just one is a list , solve one and apply the expression to the result of one and the value of two, before creating a new list.
-     (and (number? two) (and (list? one) (not= one (evaltree-recursive-v2 one))))
+     (and (number? two) (and (list? one) (not= one (evaltree-recursive one))))
           (cons
             (apply (resolve(symbol exp)) (cons (first (evaltree-recursive one))  (cons two '())))
             (cons (evaltree-recursive one) (cons two '())))
 
      ;;If just two is a list , solve one and apply the expression to the result of two and the value of one, before creating a new list.
-     (and (number? one) (and (list? two) (not= two (evaltree-recursive-v2 two))))
+     (and (number? one) (and (list? two) (not= two (evaltree-recursive two))))
           (cons
             (apply (resolve(symbol exp)) (cons one (cons (first (evaltree-recursive two)) '())))
             (cons one (cons (evaltree-recursive two) '())))
