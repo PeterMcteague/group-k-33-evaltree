@@ -92,23 +92,22 @@
      )))
 
 
- ;;Tests for first recursive solution
- (evaltree-recursive '(* 3 2))
- (evaltree-recursive '(* (+ 1 2) (+ -5 6)))
- (evaltree-recursive '(* 2 (+ -5 6)))
- (evaltree-recursive '(* (+ -5 6) 2))
- (evaltree-recursive '(* () 2))
- (evaltree-recursive '(* 2))
- (evaltree-recursive '(* (+ 5 (* 3 7)) (- 6 8)))
+;;Tests for first recursive solution
+(evaltree-recursive '(* 3 2))
+(evaltree-recursive '(* (+ 1 2) (+ -5 6)))
+(evaltree-recursive '(* 2 (+ -5 6)))
+(evaltree-recursive '(* (+ -5 6) 2))
+(evaltree-recursive '(* () 2))
+(evaltree-recursive '(* 2))
+(evaltree-recursive '(* (+ 5 (* 3 7)) (- 6 8)))
+(evaltree-recursive-v2 '(* (+ 5 ()) (- 6 8)))
 ;;Tests for v2 recursive solution
- (evaltree-recursive-v2 '(* 3 2))
- (evaltree-recursive-v2 '(* (+ 1 2) (+ -5 6)))
- (evaltree-recursive-v2 '(* 2 (+ -5 6)))
- (evaltree-recursive-v2 '(* (+ -5 6) 2))
- (evaltree-recursive-v2 '(* () 2))
- (evaltree-recursive-v2 '(* 2))
- (evaltree-recursive-v2 '(* (+ 5 (* 3 7)) (- 6 8)))
-;;This following one however, causes issues as we can't verify whether or not
-  (evaltree-recursive-v2 '(* (+ 5 ()) (- 6 8)))             ;;broken one
+(evaltree-recursive-v2 '(* 3 2))
+(evaltree-recursive-v2 '(* (+ 1 2) (+ -5 6)))
+(evaltree-recursive-v2 '(* 2 (+ -5 6)))
+(evaltree-recursive-v2 '(* (+ -5 6) 2))
+(evaltree-recursive-v2 '(* () 2))
+(evaltree-recursive-v2 '(* 2))
+(evaltree-recursive-v2 '(* (+ 5 (* 3 7)) (- 6 8)))
+(evaltree-recursive-v2 '(* (+ 5 ()) (- 6 8)))
 
-(and (and (list? '(+ 5 * ())) (list? '(- 6 8))) (and (not= '(+ 5 * ()) (evaltree-recursive-v2 '(+ 5 * ()))) (not= '(- 6 8) (evaltree-recursive-v2 '(- 6 8)))))
